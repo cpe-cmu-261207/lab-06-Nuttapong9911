@@ -1,18 +1,13 @@
 import React from 'react';
 import Navbar from './component/Navbar';
-import { BrowserRouter as Router, Switch, Route, useHistory  } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Current from './component/Current'
 import HistoryPage from './component/History';
+import Result from './component/Result'
 
 
 
 function App() {
-
-  const history = useHistory();
-
-  const goResult = () => {
-      history.push("./history/result")
-  }
 
   return (
     <Router>
@@ -25,8 +20,8 @@ function App() {
         <Route exact path='/history/select'>
           <HistoryPage />
         </Route>
-        <Route exact path='/history/result'>
-          <HistoryPage />
+        <Route  path='/history/result'>
+          <Result />
         </Route>
         <Route exact path='/about'>
 
